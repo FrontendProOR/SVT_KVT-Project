@@ -1,0 +1,95 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-amber-600">Submit Your Review</h2>
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" novalidate>
+  
+      <!-- Rate Equipment -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="rateEquipment" class="form-label text-gray-700">Rate Equipment (1-10)</label>
+          <input
+            type="number"
+            id="rateEquipment"
+            formControlName="rateEquipment"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            min="1"
+            max="10"
+            placeholder="Rate the quality of equipment"
+          />
+          <div *ngIf="reviewForm.get('rateEquipment')?.touched && reviewForm.get('rateEquipment')?.invalid" class="text-red-600">
+            <div *ngIf="reviewForm.get('rateEquipment')?.errors?.['required']">Rating for equipment is required.</div>
+          </div>
+        </div>
+  
+        <!-- Rate Hygiene -->
+        <div class="col-md-6">
+          <label for="rateHygiene" class="form-label text-gray-700">Rate Hygiene (1-10)</label>
+          <input
+            type="number"
+            id="rateHygiene"
+            formControlName="rateHygiene"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            min="1"
+            max="10"
+            placeholder="Rate the cleanliness"
+          />
+          <div *ngIf="reviewForm.get('rateHygiene')?.touched && reviewForm.get('rateHygiene')?.invalid" class="text-red-600">
+            <div *ngIf="reviewForm.get('rateHygiene')?.errors?.['required']">Rating for hygiene is required.</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Rate Space and Staff -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="rateSpace" class="form-label text-gray-700">Rate Space (1-10)</label>
+          <input
+            type="number"
+            id="rateSpace"
+            formControlName="rateSpace"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            min="1"
+            max="10"
+            placeholder="Rate the available space"
+          />
+          <div *ngIf="reviewForm.get('rateSpace')?.touched && reviewForm.get('rateSpace')?.invalid" class="text-red-600">
+            <div *ngIf="reviewForm.get('rateSpace')?.errors?.['required']">Rating for space is required.</div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="rateStaff" class="form-label text-gray-700">Rate Staff (1-10)</label>
+          <input
+            type="number"
+            id="rateStaff"
+            formControlName="rateStaff"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            min="1"
+            max="10"
+            placeholder="Rate the staff friendliness"
+          />
+          <div *ngIf="reviewForm.get('rateStaff')?.touched && reviewForm.get('rateStaff')?.invalid" class="text-red-600">
+            <div *ngIf="reviewForm.get('rateStaff')?.errors?.['required']">Rating for staff is required.</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Comment Section -->
+      <div class="mb-3">
+        <label for="commentText" class="form-label text-gray-700">Your Comments</label>
+        <textarea
+          id="commentText"
+          formControlName="commentText"
+          class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+          rows="3"
+          placeholder="Share your experience or any additional feedback"
+        ></textarea>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group text-center">
+        <button type="submit" class="btn bg-orange-600 text-white hover:bg-orange-700" [disabled]="reviewForm.invalid">Submit Review</button>
+      </div>
+  
+    </form>
+  </div>
+  

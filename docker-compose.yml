@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fitpass
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./backend/fitpass/src/main/resources/static/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+
+  # Backend Service (Spring Boot)
+  backend:
+    build: ./backend/fitpass
+    container_name: fitpass-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/fitpass
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - db
+    volumes:
+      - ./backend/fitpass/fitpass-bucket:/app/fitpass-bucket
+      - ./images:/app/images
+
+  # Frontend Service (Angular)
+  frontend:
+    build: ./frontend/fitpassapp
+    container_name: fitpass-frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+    volumes:
+      - ./images:/app/assets/images

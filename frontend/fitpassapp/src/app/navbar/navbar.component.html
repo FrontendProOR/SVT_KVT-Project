@@ -1,0 +1,67 @@
+<header class="text-white bg-orange-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
+    <!-- Logo and Home Link -->
+    <!-- <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" routerLink="homepage">
+      <span class="ml-3 text-2xl items-center font-bold">FITPASS</span>
+    </a> -->
+
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0 flex-shrink-0" routerLink="homepage">
+      <span class="ml-3 mt-3 text-4xl font-bold" style="text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);">FITPASS</span>
+    </a>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="inline-flex p-3 rounded-lg text-white hover:text-amber-300 focus:outline-none md:hidden ml-auto" id="menu-toggle">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <!-- <path d="M4 6h16M4 12h16M4 18h16"></path> -->
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-amber-300 flex flex-wrap text-base justify-center space-y-4 md:space-y-0 md:space-x-5">
+      <a class="hover:text-amber-300 mx-5 text-xl font-bold" routerLink="facility-add">Add Facility</a>
+      <a class="hover:text-amber-300 mx-5 text-xl font-bold" routerLink="profile">Profile</a>
+      <a class="hover:text-amber-300 mx-5 text-xl font-bold" routerLink="acc-req">Account Requests</a>
+    </nav>
+
+    <!-- Authentication Buttons -->
+    <div class="flex space-x-4 mt-4 md:mt-0 mb-4">
+      <button class="inline-flex items-center text-xl mx-3 bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-500 rounded text-base font-bold" routerLink="login">
+        Login
+      </button>
+      <button class="inline-flex items-center text-xl mx-3 bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-500 rounded text-base font-bold" routerLink="register">
+        Register
+      </button>
+      <button class="inline-flex items-center text-xl mx-3 bg-red-600 border-0 py-1 px-3 focus:outline-none hover:bg-red-500 rounded text-base font-bold" (click)="logout()">
+        Log Out
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu (Hidden on Larger Screens) -->
+<!-- <div id="mobile-menu" class="md:hidden fixed inset-0 bg-orange-700 bg-opacity-90 flex flex-col items-center justify-center">
+  <nav class="flex flex-col items-center">
+    <a class="text-white hover:text-amber-300 py-2" routerLink="acc-req">Account Requests</a>
+    <a class="text-white hover:text-amber-300 py-2" routerLink="profile">Profile</a>
+    <a class="text-white hover:text-amber-300 py-2" routerLink="facility-add">Add Facility</a>
+    <button class="mt-4 bg-red-600 border-0 py-2 px-4 focus:outline-none hover:bg-red-500 rounded text-base text-white" routerLink="login">
+      Login
+    </button>
+    <button class="mt-2 bg-red-600 border-0 py-2 px-4 focus:outline-none hover:bg-red-500 rounded text-base text-white" routerLink="register">
+      Register
+    </button>
+    <button class="mt-2 bg-red-600 border-0 py-2 px-4 focus:outline-none hover:bg-red-500 rounded text-base text-white" (click)="logout()">
+      Log Out
+    </button>
+  </nav>
+</div> -->
+
+<router-outlet></router-outlet>
+
+<!-- Script for Mobile Menu Toggle -->
+<!-- <script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script> -->

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45256e9d-dbca-454e-b9a1-bf012d6f883e" name="Changes" comment="nesto na frontu dodavao nista spec">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ExerciseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ManagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ManagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/RateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/RateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/java/fitpass/fitpass/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fitpass/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fitpass/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2gWRE1oJ54F5Aquh0QMQWwA9aA9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.C:/Users/pajapatak/OneDrive/Desktop/svt_kvt_project/2024-svt-kvt-projekat-radicSR16/backend/Fitpass Backend/build.gradle.executor": "Run",
+    "Gradle.C:/Users/pajapatak/OneDrive/Desktop/svt_kvt_project/2024-svt-kvt-projekat-radicSR16/backend/Fitpass Backend/settings.gradle.executor": "Run",
+    "Maven.fitpass-backend.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.FitpassBackend.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pajapatak/OneDrive/Desktop/SVTProjekat/svt_kvt_project/2024-svt-kvt-projekat-radicSR16/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pajapatak\OneDrive\Desktop\svt_kvt_project\2024-svt-kvt-projekat-radicSR16\backend\Fitpass Backend\src\main\java\fitpass\fitpassbackend\" />
+      <recent name="C:\Users\pajapatak\OneDrive\Desktop\svt_kvt_project\2024-svt-kvt-projekat-radicSR16\backend\Fitpass Backend\src\main\java\fitpass\fitpassbackend\model" />
+      <recent name="C:\Users\pajapatak\OneDrive\Desktop\svt_kvt_project\2024-svt-kvt-projekat-radicSR16\backend\Fitpass Backend\src\main\java\fitpass\fitpassbackend\config" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45256e9d-dbca-454e-b9a1-bf012d6f883e" name="Changes" comment="" />
+      <created>1715811233880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715811233880</updated>
+      <workItem from="1715811237078" duration="738000" />
+      <workItem from="1718475072177" duration="1209000" />
+      <workItem from="1718489714005" duration="7884000" />
+      <workItem from="1718498245033" duration="291000" />
+      <workItem from="1722980634414" duration="174000" />
+      <workItem from="1723290401309" duration="17000" />
+      <workItem from="1723295419514" duration="154000" />
+      <workItem from="1723295685958" duration="421000" />
+      <workItem from="1723556646080" duration="20000" />
+      <workItem from="1723582963931" duration="836000" />
+      <workItem from="1723583838811" duration="1028000" />
+      <workItem from="1724967418958" duration="248000" />
+    </task>
+    <task id="LOCAL-00001" summary="dodao slojeve na backend i neki kod koji nema implementaciju">
+      <option name="closed" value="true" />
+      <created>1718495594898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718495594898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="nesto na frontu dodavao nista spec">
+      <option name="closed" value="true" />
+      <created>1723584435037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723584435037</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="dodao slojeve na backend i neki kod koji nema implementaciju" />
+    <MESSAGE value="nesto na frontu dodavao nista spec" />
+    <option name="LAST_COMMIT_MESSAGE" value="nesto na frontu dodavao nista spec" />
+  </component>
+</project>

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2 class="text-amber-600">Account Requests</h2>
+  <table class="table bg-white border border-gray-300">
+    <thead class="bg-amber-600 text-white">
+      <tr>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Created At</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of accountRequests" class="border-b border-gray-200">
+        <td>{{ req.email }}</td>
+        <td>{{ req.address }}</td>
+        <td>{{ req.createdAt | date }}</td>
+        <td>{{ req.status }}</td>
+        <td>
+          <button class="btn bg-amber-600 text-white hover:bg-amber-700 btn-sm" (click)="acceptRequest(req.id)">
+            Accept Request
+          </button>
+          <button class="btn bg-red-600 text-white hover:bg-red-700 btn-sm" (click)="rejectRequest(req.id)">
+            Reject Request
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

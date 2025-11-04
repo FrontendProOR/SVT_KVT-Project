@@ -1,0 +1,76 @@
+<div *ngIf="facility" class="container mt-5">
+  <div class="card shadow-lg border border-gray-300">
+    <div class="card-header bg-amber-600 text-white text-center">
+      <h2 class="mb-0">{{ facility.facilityName }}</h2>
+    </div>
+    <div class="card-body bg-white text-gray-800">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <p><strong>Description:</strong></p>
+          <p>{{ facility.description }}</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <p><strong>Address:</strong></p>
+          <p>{{ facility.address }}</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <p><strong>City:</strong></p>
+          <p>{{ facility.city }}</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <p><strong>Total Rating:</strong></p>
+          <p class="badge bg-amber-500 text-white">{{ facility.totalRating }}</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <p><strong>Status:</strong></p>
+          <p>
+            <span [ngClass]="facility.active ? 'badge bg-green-500 text-white' : 'badge bg-red-500 text-white'">
+              {{ facility.active ? 'Active' : 'Inactive' }}
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4 class="text-amber-600">Disciplines</h4>
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let discipline of facility.disciplines" class="list-group-item bg-gray-50 text-gray-800">
+              {{ discipline.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h4 class="text-amber-600">Work Days</h4>
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let workDay of facility.workDays" class="list-group-item bg-gray-50 text-gray-800">
+              {{ workDay.day }}: from {{ workDay.fromTime }}h to {{ workDay.untilTime }}h
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-3 mt-3">
+          <button class="btn bg-orange-600 text-white hover:bg-orange-700 w-100" routerLink="exercise-add">Reserve</button>
+        </div>
+        <div class="col-md-3 mt-3">
+          <button class="btn bg-orange-600 text-white hover:bg-orange-700 w-100" routerLink="edit">Edit</button>
+        </div>
+        <div class="col-md-3 mt-3">
+          <button class="btn bg-orange-600 text-white hover:bg-orange-700 w-100" routerLink="review">Add Review</button>
+        </div>
+        <div class="col-md-3 mt-3">
+          <button class="btn bg-red-600 text-white hover:bg-red-700 w-100" (click)="deleteFacility()">Delete Facility</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!facility" class="container mt-5 text-center">
+  <p class="lead text-gray-700">Loading facility details... Please wait while we retrieve the information.</p>
+</div>

@@ -1,0 +1,95 @@
+<div class="container mt-5">
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fromDate" class="text-gray-700">Select Start Date for the Task:</label>
+          <input
+            type="date"
+            id="fromDate"
+            formControlName="fromDate"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            (change)="validateDates()"
+            placeholder="Choose the start date"
+            [ngClass]="{'is-invalid': taskForm.get('fromDate')?.invalid && taskForm.get('fromDate')?.touched}"
+          />
+          <div class="invalid-feedback text-red-600">
+            Please provide a valid start date. The date field cannot be left blank.
+          </div>
+          <div class="text-red-600" *ngIf="dateError">The start date must be the same as the end date to proceed.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="untilDate" class="text-gray-700">Select End Date for the Task:</label>
+          <input
+            type="date"
+            id="untilDate"
+            formControlName="untilDate"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            (change)="validateDates()"
+            placeholder="Choose the end date"
+            [ngClass]="{'is-invalid': taskForm.get('untilDate')?.invalid && taskForm.get('untilDate')?.touched}"
+          />
+          <div class="invalid-feedback text-red-600">
+            Please provide a valid end date. Ensure that the end date is correctly entered.
+          </div>
+          <div class="text-red-600" *ngIf="dateError">The end date must match the start date to continue.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fromTime" class="text-gray-700">Select Start Time for the Task:</label>
+          <input
+            type="time"
+            id="fromTime"
+            formControlName="fromTime"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            (change)="validateTimes()"
+            placeholder="Set the start time"
+            [ngClass]="{'is-invalid': taskForm.get('fromTime')?.invalid && taskForm.get('fromTime')?.touched}"
+          />
+          <div class="invalid-feedback text-red-600">
+            Please enter a valid start time. Make sure it's within a logical time range.
+          </div>
+          <div class="text-red-600" *ngIf="timeError">The start time must be earlier than the end time.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="untilTime" class="text-gray-700">Select End Time for the Task:</label>
+          <input
+            type="time"
+            id="untilTime"
+            formControlName="untilTime"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            (change)="validateTimes()"
+            placeholder="Set the end time"
+            [ngClass]="{'is-invalid': taskForm.get('untilTime')?.invalid && taskForm.get('untilTime')?.touched}"
+          />
+          <div class="invalid-feedback text-red-600">
+            Please enter a valid end time. Make sure the time is accurate.
+          </div>
+          <div class="text-red-600" *ngIf="timeError">The end time must be later than the start time.</div>
+        </div>
+      </div>
+    </div>
+
+    <input type="hidden" formControlName="id" class="form-control">
+
+    <div class="form-group text-center mt-4">
+      <button type="submit" class="btn bg-amber-600 text-white hover:bg-amber-700 btn-block" [disabled]="taskForm.invalid">
+        Submit Your Task Details
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="exerciseError" class="alert bg-red-600 text-white mt-3 text-center">
+    We encountered an issue while trying to reserve the exercise. Please try again later!
+  </div>
+</div>

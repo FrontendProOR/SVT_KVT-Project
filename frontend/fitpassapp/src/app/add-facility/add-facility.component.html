@@ -1,0 +1,159 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center text-amber-600">Add Facility</h2>
+  <form (ngSubmit)="addFacility()">
+
+    <!-- Facility Name and Description -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name" class="text-gray-700">Facility Name:</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="facility.facilityName"
+            name="name"
+            required
+            placeholder="Enter facility name"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="description" class="text-gray-700">Facility Description:</label>
+          <input
+            type="text"
+            id="description"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="facility.description"
+            name="description"
+            required
+            placeholder="Enter facility description"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Address and City -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="address" class="text-gray-700">Facility Address:</label>
+          <input
+            type="text"
+            id="address"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="facility.address"
+            name="address"
+            required
+            placeholder="Enter address"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="city" class="text-gray-700">City:</label>
+          <input
+            type="text"
+            id="city"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="facility.city"
+            name="city"
+            required
+            placeholder="Enter city"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Days Section -->
+    <div class="form-group mb-4">
+      <label for="workDays" class="text-gray-700">Work Days:</label>
+      <div *ngFor="let workDay of facility.workDays; let i = index" class="form-row align-items-center mb-2">
+        <div class="col-md-3 col-sm-6">
+          <input
+            type="date"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="workDay.validFrom"
+            [ngModelOptions]="{ standalone: true }"
+            name="workDays[{{ i }}].validFrom"
+            placeholder="Valid From"
+          />
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <select
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="workDay.day"
+            [ngModelOptions]="{ standalone: true }"
+            name="workDays[{{ i }}].dayOfWeek"
+          >
+            <option value="" disabled>Select Day of Week</option>
+            <option *ngFor="let day of daysOfWeek" [value]="day">{{ day }}</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <input
+            type="time"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="workDay.fromTime"
+            [ngModelOptions]="{ standalone: true }"
+            name="workDays[{{ i }}].from"
+            placeholder="From"
+          />
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <input
+            type="time"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="workDay.untilTime"
+            [ngModelOptions]="{ standalone: true }"
+            name="workDays[{{ i }}].until"
+            placeholder="Until"
+          />
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <button
+            type="button"
+            class="btn bg-red-600 text-white hover:bg-red-700 btn-block"
+            (click)="removeWorkDay(i)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <button type="button" class="btn bg-orange-600 text-white hover:bg-orange-700 mt-3" (click)="addWorkDay()">Add Work Day</button>
+    </div>
+
+    <!-- Disciplines Section -->
+    <div class="form-group mb-4">
+      <label for="disciplines" class="text-gray-700">Disciplines:</label>
+      <div *ngFor="let discipline of facility.disciplines; let i = index" class="form-row align-items-center mb-2">
+        <div class="col-md-10 col-sm-8">
+          <input
+            type="text"
+            class="form-control bg-gray-100 border-gray-300 focus:bg-white focus:ring-2 focus:ring-amber-500"
+            [(ngModel)]="discipline.name"
+            [ngModelOptions]="{ standalone: true }"
+            name="disciplines[{{ i }}].name"
+            placeholder="Discipline Name"
+          />
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <button
+            type="button"
+            class="btn bg-red-600 text-white hover:bg-red-700 btn-block"
+            (click)="removeDiscipline(i)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <button type="button" class="btn bg-orange-600 text-white hover:bg-orange-700 mt-3" (click)="addDiscipline()">Add Discipline</button>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group text-center mt-4">
+      <button type="submit" class="btn bg-amber-600 text-white hover:bg-amber-700 btn-block">Add Facility</button>
+    </div>
+  </form>
+</div>
